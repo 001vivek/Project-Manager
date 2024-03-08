@@ -16,7 +16,10 @@ export default function Tasks({ tasks, onAdd, onDelete }) {
           {tasks.map((task) => (
             <li key={task.id} className="flex justify-between my-4">
               <span>{task.text}</span>
-              <button className="text-grat-500 text-red-500 text-xs  hover:bg-red-500 hover:text-white  bg-white border rounded px-4 py-1 border-red-500">
+              <button
+                onClick={() => onDelete(task.id)}
+                className="text-grat-500 text-red-500 text-xs  hover:bg-red-500 hover:text-white  bg-white border rounded px-4 py-1 border-red-500"
+              >
                 Clear
               </button>
             </li>

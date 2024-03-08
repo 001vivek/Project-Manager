@@ -20,9 +20,9 @@ export default function ProjectSidebar({
       <ul className="mt-8">
         {projects.map((project) => {
           let cssClasses =
-            "w-full mb-4 bg-gray-200 hover:bg-gray-500 rounded px-2 hover:text-white   text-left py-2";
+            "w-full mb-4 bg-gray-200  rounded px-2    text-left py-2";
           if (project.id === selectedProjectId) {
-            cssClasses += " bg-gray-800 text-green-500  ";
+            cssClasses += " border text-white text-black bg-green-500   ";
           } else {
             cssClasses += " text-gray-900  ";
           }
